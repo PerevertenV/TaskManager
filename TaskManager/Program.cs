@@ -1,5 +1,6 @@
 using TaskManager.Data;
 using Microsoft.EntityFrameworkCore;
+using TaskManager.Repository.IRepository;
 
 namespace TaskManager
 {
@@ -21,8 +22,9 @@ namespace TaskManager
 				});
 			});
 
-			builder.Services.AddControllers();
+			builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
 
+			builder.Services.AddControllers();
 
 			var app = builder.Build();
 
