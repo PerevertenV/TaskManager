@@ -5,7 +5,7 @@ namespace TaskManager.Repository
 {
 	public class UnitOfWork : IUnitOfWork
 	{
-		private readonly ApplicationDbContext _context;
+		private ApplicationDbContext _context;
 		public IUserRepository User { get; private set; }
 		public ITaskRepository Task { get; private set; }
 
@@ -15,7 +15,5 @@ namespace TaskManager.Repository
 			User = new UserRepository(_context);
 			Task = new TaskRepository(_context);
         }
-
-
     }
 }

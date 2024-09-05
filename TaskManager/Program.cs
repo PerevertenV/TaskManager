@@ -1,6 +1,7 @@
 using TaskManager.Data;
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Repository.IRepository;
+using TaskManager.Repository;
 
 namespace TaskManager
 {
@@ -22,7 +23,7 @@ namespace TaskManager
 				});
 			});
 
-			builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
+			builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 			builder.Services.AddControllers();
 
