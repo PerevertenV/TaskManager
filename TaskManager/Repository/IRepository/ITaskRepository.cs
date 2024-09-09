@@ -1,6 +1,6 @@
 ﻿namespace TaskManager.Repository.IRepository
 {
-	public interface ITaskRepository: IRepository<Task>
+	public interface ITaskRepository: IRepository<Models.Task>
 	{
 	}
 }

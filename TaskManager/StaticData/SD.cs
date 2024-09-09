@@ -7,7 +7,7 @@
 		public static string Status_Completed = "Completed";
 
 		public static string Priority_Low = "Low";
-		public static string Status_Medium = "Medium";
-		public static string Status_High = "High";
+		public static string Priority_Medium = "Medium";
+		public static string Priority_High = "High";
     }
 }
